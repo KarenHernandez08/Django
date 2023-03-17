@@ -57,6 +57,8 @@ Vamos a acceder a la url que aparece en el reglon de Starting development server
 
 ![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/servidor_django.JPG)
 
+
+
 La configuración del proyecto que se encuentra en el fichero ```settings.py``` se puede observar más a fondo en el siguiente [link](https://docs.djangoproject.com/en/2.0/ref/settings/)
 
 ___
@@ -69,4 +71,27 @@ Dentro de nuestra carpeta del proyecto esta nuestra aplicación blog, se crearon
 
 ![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/blog.JPG)
 
+___
+
+# Activar la aplicación.
+
+Nos dirigimos al ```settings.py``` y anotaremos el nombre de nuestra aplicación en la lista de INSTALLED_APPS. 
+```python
+'blog.apps.BlogConfig',
+```
+
+Creamos nuestras migraciones con el comando ```python manage.py makemigrations blog```  {blog} es el nombre de la aplicación.
+
+La salida de la terminal sera algo así 
+```
+Migrations for 'blog':                               Hub\Django\mysite>
+  blog\migrations\0001_initial.py
+    - Create model Post
+```
+
+___
+
+# Para revisar las migraciones
+
+Utilizar el sigueinte comando para revisar la salida SQL de la migración anterior ```python manage.py sqlmigrate blog 0001```
 
