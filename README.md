@@ -1,9 +1,9 @@
-# Crea un blog con Django 
+# Crea un blog con Django.
 ___
 
 Desacargar e instalar python [python](https://www.python.org/downloads/)
 
-Crear un entorno de desarrollo virtual en python, una vez dentro de la carpeta del proyecto, ejecutar los siguientes comandos
+Crear un entorno de desarrollo virtual en python, una vez dentro de la carpeta del proyecto, ejecutar los siguientes comandos:
 
 ```
 pip install  virtualenv 
@@ -16,9 +16,9 @@ python -m venv my_venv
 
 * **python -m venv my_venv** crea un entorno de desarrollo independiente, esto generara un directorio dentro de mi proyecto con nombre my_env
 
-Para activar el entorno virtual colocar en la terminal ```my_venv\Scripts\activate```, y para desactivarlo solo con la palabra ```deactivate```
+Para activar el entorno virtual colocar en la terminal ```my_venv\Scripts\activate```, y para desactivarlo solo con la palabra ```deactivate```.
 
-Instalar django mediante pip, podemos especificar la versión que queremos ```pip install Django==4.1.7``` quedara instalado en nuestro entorno virtual
+Instalar django mediante pip, podemos especificar la versión que queremos ```pip install Django==4.1.7``` quedara instalado en nuestro entorno virtual.
 
 ___
 
@@ -56,3 +56,17 @@ Quit the server with CTRL-BREAK.
 Vamos a acceder a la url que aparece en el reglon de Starting development server at, después de pegarla en nuestro navegador, veremos algo como la siguiente imagen.
 
 ![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/servidor_django.JPG)
+
+La configuración del proyecto que se encuentra en el fichero ```settings.py``` se puede observar más a fondo en el siguiente [link](https://docs.djangoproject.com/en/2.0/ref/settings/)
+
+___
+
+## Crear una aplicación. 
+
+Para crear la aplicación, ejecutar en nuestra terminal el siguiente comando ```python manage.py startapp blog``` {blog} es el nombre de nuestra aplicación.
+
+Dentro de nuestra carpeta del proyecto esta nuestra aplicación blog, se crearon archivos de ``` migrations```  va a contener las migraciones de nuestra aplicación, ``` admin```  que es donde se registran los modelos, ``` apps```  es la configuración principal de la aplicación blog, ``` models```  contiene los modelos de datos de la aplicación, ``` test```  donde se incluyen los test de la aplicación y ``` views```  contiene la lógica de la aplicación.
+
+![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/blog.JPG)
+
+
