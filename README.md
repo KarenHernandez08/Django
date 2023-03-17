@@ -27,6 +27,7 @@ ___
 En la terminal dentro de nuestro proyecto, colocaremos el siguiente comando ```django-admin startproject mysite```, {mysite} es el nombre de mi proyecto.
 
 Se creara la carpeta con diferentes archivos.
+
 ![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/mysite.JPG)
 
 * ```manage.py``` es un script que permite interactuar con el proyecto y no es necesario editarlo o modificarlo.
