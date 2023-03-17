@@ -27,3 +27,31 @@ ___
 En la terminal dentro de nuestro proyecto, colocaremos el siguiente comando ```django-admin startproject mysite```, {mysite} es el nombre de mi proyecto.
 
 Se creara la carpeta con diferentes archivos.
+![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/mysite.JPG)
+
+* ```manage.py``` es un script que permite interactuar con el proyecto y no es necesario editarlo o modificarlo.
+* ```mysite``` es el directorio del proyecto el cual contiene:
+    * ```__init__.py```  es un fichero vacio que indica que es un modulo de python.
+    * ```settings.py``` es donde se encuentra toda la configuración de nuestro proyecto.
+    * ```urls.py``` es donde va a contener todas las urls.
+    * ```wsgi.py``` es la configuración para que nuestro proyecto lo podamos desplegar (Web Server Gateway Interface).
+
+El comando ```python manage.py migrate``` genera las migraciones de base de datos aplicada por Django, en la terminal antes de colocar el comando, posicionarnos en la carpeta de nuestro proyecto con ```cd``` en seguida el nombre de la carpeta.
+
+
+Con Django podemos correr el servidor con este comando ```python manage.py runserver```, nos va a dar las siguientes líneas en la terminal.
+
+```
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+March 17, 2023 - 13:26:59
+Django version 4.1.7, using settings 'mysite.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CTRL-BREAK.
+```
+
+Vamos a acceder a la url que aparece en el reglon de Starting development server at, después de pegarla en nuestro navegador, veremos algo como la siguiente imagen.
+
+![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/servidor_django.JPG)
