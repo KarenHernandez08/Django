@@ -91,7 +91,22 @@ Migrations for 'blog':                               Hub\Django\mysite>
 
 ___
 
-# Para revisar las migraciones
+# Para revisar las migraciones.
 
 Utilizar el sigueinte comando para revisar la salida SQL de la migración anterior ```python manage.py sqlmigrate blog 0001```
 
+___
+
+# Crear un superusuario.
+
+En la terminal colocaremos el siguiente comando ``` python manage.py createsuperuser```, en seguida de darle enter en la consola nos va a pedir un Username, un correo con el que podemos entrar al servidor y la contraseña.
+
+Cuando levantemos de nuevo el servidor, le agregaremos admin/ a la url que nos dara, es donde colocaremos el correo y la contraseña, misma que pusimos en nuesstra terminal
+
+Aquí es donde pondremos el username y la contraseña.
+
+![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/admin.JPG)
+
+Cuando entremos, se vera algo así, es el panel inicial.
+
+![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/login.JPG)
