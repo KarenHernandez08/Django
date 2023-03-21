@@ -110,3 +110,18 @@ Aquí es donde pondremos el username y la contraseña.
 Cuando entremos, se vera algo así, es el panel inicial.
 
 ![](https://github.com/KarenHernandez08/Django/blob/main/imagenes/login.JPG)
+
+___
+
+# Añadir modelos al sitio de administración.
+
+En nuestro proyecto tenemos un archivo dentro de nuestra aplicación que se llama ```admin.py```  y vamos a estar agregando nuestros modelos, en este caso solo se a creado Post, se vera de la siguiente manera.
+
+``` python
+from django.contrib import admin
+from.models import Post
+
+admin.site.register(Post)```
+
+
+Después de agregarlo, vamos a corer nuestro servidor, cuando entremos al admin, ya veremos que está el nuevo modelo Post
