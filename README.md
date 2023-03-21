@@ -144,3 +144,54 @@ raw_id_fields = ('author')
 date_hierarchy = 'publish'
 ordering = ('status', 'publish')
 ```
+
+___
+
+# Cuándo se evalúan los Querysets
+
+Estos se evaluán en las siguientes situaciones:
+
+* La primera vez que se itera sobre ellos.
+* Cuando accedemos a un elementos, las posiciones
++ Cuando se hacen operaciones booleanas, or, and o if.
+
+___
+
+# Crear gestores de modelos
+
+El gestor permitirá recuperar los articulos, definiendo gestores personalizados.
+
+```python
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super (PublishedManager,
+                      self).get_queryset()\
+                           .filter(status='published')
+```
+
+___
+# Elaborar vistas 
+Una vista de Django recibe una solicitud web y la devuelve como una respuesta web, se crean las aplicaciones de vistas creando las plantillas html, como respuesta HTTP.
+
+en nuestro archivo ```views.py``` vamos a colocar el siguiente código.
+
+```python
+from django.shortcuts import render, get_object_or_404
+from .models import Post
+
+def post_list(request):
+    posts = Post.published.all()
+    return render(request,
+                  'blog/post/list.html',
+                  {'posts':posts})
+
+def post_detail(request, year, month,day, post):
+    post = get_object_or_404(Post, slug=post,
+                             status= 'published',
+                             publish_year=year,
+                             publish_month = month,
+                             publish_day=day)
+    return render (request, 
+                   'blog/post/list.html',
+                  {'post':post})
+```
