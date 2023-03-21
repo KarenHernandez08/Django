@@ -117,11 +117,30 @@ ___
 
 En nuestro proyecto tenemos un archivo dentro de nuestra aplicación que se llama ```admin.py```  y vamos a estar agregando nuestros modelos, en este caso solo se a creado Post, se vera de la siguiente manera.
 
-``` python
+```python
 from django.contrib import admin
 from.models import Post
-
-admin.site.register(Post)```
+admin.site.register(Post)
+```
 
 
 Después de agregarlo, vamos a corer nuestro servidor, cuando entremos al admin, ya veremos que está el nuevo modelo Post
+
+## Personalizar la vista de modelos
+
+Quedara de la siguiente manera 
+
+```python
+from django.contrib import admin
+from.models import Post
+# Register your models here.
+admin.site.register(Post)
+class PostAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug', 'author', 'publish', 'status')
+    list_filter = ('status', 'created', 'publish', 'author')
+search_fields =('title', 'body')
+prepoluted_fields = {'slug': ('title',)}
+raw_id_fields = ('author')
+date_hierarchy = 'publish'
+ordering = ('status', 'publish')
+```
