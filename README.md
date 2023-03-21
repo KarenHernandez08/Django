@@ -195,3 +195,29 @@ def post_detail(request, year, month,day, post):
                    'blog/post/list.html',
                   {'post':post})
 ```
+___
+
+# Añadir url
+permiten relacionar url con vistas.
+
+vamos a crear una nueva carpeta cin nombre urls.py dentro de nuestra aplicación y colocaremos el siguiente código.
+
+```python
+from django.urls import path
+from . import views
+
+app_name='blog'
+
+urlpatterns= [
+    path('', views.post_list, name='post_list'),
+    path('<int:year>/<int:month>/<int:day>/<slug:post>/',
+         views.post_detail,
+         name= 'post_detail'),
+]
+```
+
+Después colocaremos nuetra url de nuestra aplicación en el proyecto 
+
+```python
+path('blog/', include('blog.urls',namespace='blog')),
+```
