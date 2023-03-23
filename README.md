@@ -200,7 +200,7 @@ ___
 # Añadir url
 permiten relacionar url con vistas.
 
-vamos a crear una nueva carpeta cin nombre urls.py dentro de nuestra aplicación y colocaremos el siguiente código.
+vamos a crear una nueva carpeta con nombre ```urls.py``` dentro de nuestra aplicación y colocaremos el siguiente código.
 
 ```python
 from django.urls import path
