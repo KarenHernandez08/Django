@@ -1,8 +1,14 @@
-{% load static %}
+{% load static %}  <!–Le indica a Django que cargue la plantilla static en la aplicación django.contrib.staticfiles  –>
 <!DOCTYPE html>
 <html>
     <head>
         <title>{ % block title %} {% endblock %} </title>
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="{% static" css/blog.css" %}">
     </head>
+    <body>
+        <div id="sidebar">
+            <h2>My blog</h2>
+            <p>This is my blog.</p>
+        </div>
+    </body>
 </html>
