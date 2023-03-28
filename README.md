@@ -170,7 +170,7 @@ class PublishedManager(models.Manager):
 ```
 
 ___
-# Elaborar vistas 
+# Elaborar vistas.
 Una vista de Django recibe una solicitud web y la devuelve como una respuesta web, se crean las aplicaciones de vistas creando las plantillas html, como respuesta HTTP.
 
 en nuestro archivo ```views.py``` vamos a colocar el siguiente código.
@@ -198,9 +198,10 @@ def post_detail(request, year, month,day, post):
 ___
 
 # Añadir url
+
 permiten relacionar url con vistas.
 
-vamos a crear una nueva carpeta con nombre ```urls.py``` dentro de nuestra aplicación y colocaremos el siguiente código.
+Vamos a crear una nueva carpeta con nombre ```urls.py``` dentro de nuestra aplicación y colocaremos el siguiente código.
 
 ```python
 from django.urls import path
