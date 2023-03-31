@@ -222,3 +222,5 @@ Después colocaremos nuetra url de nuestra aplicación en el proyecto
 ```python
 path('blog/', include('blog.urls',namespace='blog')),
 ```
+
+Primer capitulo del libro...
